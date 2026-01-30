@@ -45,81 +45,93 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 transition-colors px-4">
+  <div className="min-h-screen relative flex flex-col items-center justify-center px-4 transition-colors">
 
-      {/* Theme Toggle */}
-      <button
-        onClick={() => setDarkMode((prev) => !prev)}
-        className="absolute top-5 right-5 px-4 py-2 rounded-full bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
-      >
-        {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
-      </button>
+    {/* 🎬 ANIMATED BACKGROUND */}
+    <div
+  className="
+    fixed inset-0 -z-10
+    animated-bg
+    bg-gradient-to-r
+    from-indigo-400 via-purple-400 to-pink-400
+    dark:from-purple-900 dark:via-indigo-900 dark:to-violet-900
+  "
+/>
 
-      {/* Open Modal */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition"
-      >
-        Open Modal
-      </button>
 
-      {/* Modal */}
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        
-        {!isSubmitted ? (
-          <>
-            <h2 className="text-xl font-semibold mb-2 dark:text-white">
-              Contact Us
-            </h2>
 
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              We’d love to hear from you
-            </p>
+    {/* Theme Toggle */}
+    <button
+      onClick={() => setDarkMode((prev) => !prev)}
+      className="absolute top-5 right-5 px-4 py-2 rounded-full bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
+    >
+      {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+    </button>
 
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <input
-                type="text"
-                placeholder="Name"
-                required
-                className="w-full px-3 py-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-              />
+    {/* Open Modal */}
+    <button
+      onClick={() => setIsOpen(true)}
+      className="px-8 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition"
+    >
+      Open Modal
+    </button>
 
-              <input
-                type="email"
-                placeholder="Email"
-                required
-                className="w-full px-3 py-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-              />
+    {/* Modal */}
+    <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      {!isSubmitted ? (
+        <>
+          <h2 className="text-xl font-semibold mb-2 dark:text-white">
+            Contact Us
+          </h2>
 
-              <textarea
-                placeholder="Message"
-                className="w-full px-3 py-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-              />
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            We’d love to hear from you
+          </p>
 
-              <button
-                type="submit"
-                className="w-full py-2 rounded bg-green-600 text-white hover:bg-green-700"
-              >
-                Send
-              </button>
-            </form>
-          </>
-        ) : (
-          /* ✅ SUCCESS MESSAGE */
-          <div className="text-center py-8">
-            <div className="text-green-600 text-4xl mb-3">✔</div>
-            <h3 className="text-xl font-semibold dark:text-white">
-              Form submitted successfully!
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 mt-2">
-              Thank you for contacting us.
-            </p>
-          </div>
-        )}
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <input
+              type="text"
+              placeholder="Name"
+              required
+              className="w-full px-3 py-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            />
 
-      </Modal>
-    </div>
-  );
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              className="w-full px-3 py-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            />
+
+            <textarea
+              placeholder="Message"
+              className="w-full px-3 py-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            />
+
+            <button
+              type="submit"
+              className="w-full py-2 rounded bg-green-600 text-white hover:bg-green-700"
+            >
+              Send
+            </button>
+          </form>
+        </>
+      ) : (
+        /* ✅ SUCCESS MESSAGE */
+        <div className="text-center py-8">
+          <div className="text-green-600 text-4xl mb-3">✔</div>
+          <h3 className="text-xl font-semibold dark:text-white">
+            Form submitted successfully!
+          </h3>
+          <p className="text-gray-500 dark:text-gray-400 mt-2">
+            Thank you for contacting us.
+          </p>
+        </div>
+      )}
+    </Modal>
+  </div>
+);
+
 }
 
 export default App;
