@@ -8,13 +8,13 @@ This project demonstrates clean component architecture, state management, and UI
 
 ## ✨ Features
 
-- ⚛ Reusable React Modal component
-- 🎬 Smooth open & close animations
-- 🌙 Dark / Light mode toggle (persistent with localStorage)
-- 📱 Fully responsive & mobile-friendly
-- 🖱 Click outside & ESC key to close
-- 🔒 Background scroll lock when modal is open
-- 🎨 Styled using Tailwind CSS (utility-first)
+- Reusable React Modal component
+- Smooth open & close animations
+- Dark / Light mode toggle (persistent with localStorage)
+- Fully responsive & mobile-friendly
+- Click outside & ESC key to close
+- Background scroll lock when modal is open
+- Styled using Tailwind CSS (utility-first)
 
 ---
 
@@ -62,25 +62,20 @@ npm install
 npm start
 ```
 
-## The app will run at:
+## 🌗 Dark/Light Mode
 
-http://localhost:3000
-
-## 🌗 Dark Mode
-
-Toggle using the button in the top-right corner
-
-Preference is saved using localStorage
-
-Automatically restored on page refresh
+- Toggle using the button in the top-right corner
+- Preference is saved using localStorage
+- Automatically restored on page refresh
 
 ## 🎬 Animations & UX
 
-Fade + scale modal animations
+- Fade + scale modal animations
+- Backdrop blur for better focus
+- Optimized for both desktop and mobile devices
 
-Backdrop blur for better focus
+## 🎦 Live Demo
+https://syntecxhub-modal-popup-window.vercel.app/
 
-Optimized for both desktop and mobile devices
-
-## Author
+## 👩‍💻 Author
 Shreya Gupta
