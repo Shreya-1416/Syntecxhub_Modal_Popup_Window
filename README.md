@@ -6,7 +6,7 @@ This project demonstrates clean component architecture, state management, and UI
 
 ---
 
-## ✨ Features
+## Features
 
 - Reusable React Modal component
 - Smooth open & close animations
@@ -18,7 +18,7 @@ This project demonstrates clean component architecture, state management, and UI
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **React**
 - **Tailwind CSS**
@@ -27,7 +27,7 @@ This project demonstrates clean component architecture, state management, and UI
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 react-modal/
 │
@@ -45,37 +45,37 @@ react-modal/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 1️⃣ Clone the repository
+### 1️ Clone the repository
 ```bash
 git clone https://github.com/your-username/react-modal.git
 cd react-modal
 ```
-## 2️⃣ Install dependencies
+## 2️ Install dependencies
 ```bash
 npm install
 ```
 
-## 3️⃣ Run the project
+## 3️ Run the project
 ```bash
 npm start
 ```
 
-## 🌗 Dark/Light Mode
+## Dark/Light Mode
 
 - Toggle using the button in the top-right corner
 - Preference is saved using localStorage
 - Automatically restored on page refresh
 
-## 🎬 Animations & UX
+## Animations & UX
 
 - Fade + scale modal animations
 - Backdrop blur for better focus
 - Optimized for both desktop and mobile devices
 
-## 🎦 Live Demo
+## Live Demo
 https://syntecxhub-modal-popup-window.vercel.app/
 
-## 👩‍💻 Author
+## Author
 Shreya Gupta
